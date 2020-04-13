@@ -6,10 +6,12 @@ const labelStyle = {
   paddingHorizontal,
   borderColor:'red'
 }
-
+const backgroundColor = {
+  backgroundColor:'white'
+}
 const colorsStyle = {
   primary: 'black',
   underlineColor: 'transparent',
 }
 
-export { labelStyle, colorsStyle }
+export { labelStyle, colorsStyle,backgroundColor }

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Text, TouchableOpacity } from 'react-native'
 import styles from './Button.styles'
-import PropTypes from 'prop-types'
 
 const Button = ({
   text,
