@@ -20,14 +20,13 @@ const Button = ({
         {
           width: width,
         },
+        opacity ? styles.opacity : {},
+
       ]}
     >
       <Text
         testID="label"
-        style={[
-          styles.text
-        ]}
-      >
+        style={ opacity ? styles.textOpacity : styles.text }>
         {text}
       </Text>
     </TouchableOpacity>

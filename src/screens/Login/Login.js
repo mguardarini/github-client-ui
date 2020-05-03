@@ -61,7 +61,7 @@ const Login = ({navigation}) => {
                </View>
                <View style={styles.buttonContainer}>
                     <Button onPress = {()=>authenticateUser(username,password)} text= "Log in"/>
-                    <Button onPress = {()=>authenticateUser(username,password)} text= "Forget Password?"/>
+                    <Button opacity onPress = {()=>authenticateUser(username,password)} text= "Forget Password?"/>
                </View>
            </View>
        </SafeAreaView> 

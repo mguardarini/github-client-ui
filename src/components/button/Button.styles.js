@@ -12,12 +12,23 @@ export default StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    color: "#FFFFFF",
+    color: "#FFF",
     fontSize: 16
   },
-  vazado: {
+  textOpacity: {
+    textAlign: 'center',
+    color: "#00A1F1",
+    fontSize: 16
+  },
+  opacity: {
     backgroundColor: 'transparent',
     borderWidth: 2,
-    borderColor: 'white',
+    borderColor: '#00A1F1',
+    marginTop:10,
+    padding: 16,
+    flexGrow: 1,
+    textAlign: 'center',
+    justifyContent: 'center',
+    
   }
 })
