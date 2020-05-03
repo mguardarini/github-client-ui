@@ -9,6 +9,7 @@ module.exports = {
           '@components': './src/components',
           '@screens': './src/screens',
           '@images': './src/images',
+          '@networking':'./src/networking'
         },
       },
     ],

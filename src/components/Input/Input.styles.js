@@ -10,7 +10,7 @@ const backgroundColor = {
   backgroundColor:'white'
 }
 const colorsStyle = {
-  primary: 'black',
+  primary: '#737373',
   underlineColor: 'transparent',
 }
 

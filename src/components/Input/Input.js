@@ -7,12 +7,13 @@ import {
   backgroundColor
 } from './Input.styles'
 
-const Input = ({ label, value, onChangeText }) => {
+const Input = ({ label, value, onChangeText, secureTextEntry }) => {
 
   return (
     <TextInput
     label={label}
     value={value}
+    secureTextEntry={secureTextEntry}
     style={{
       backgroundColor
     }}

@@ -8,6 +8,7 @@ const Button = ({
   width,
   disabled,
   testID,
+  opacity
 }) => {
   return (
     <TouchableOpacity

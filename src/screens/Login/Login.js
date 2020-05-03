@@ -3,11 +3,11 @@ import {
   SafeAreaView,
   View
 } from 'react-native';
-
+import { Buffer } from 'buffer'
 import { Button } from '@components/Button'
 import { Input } from '@components/Input'
-import { GithubLogo }  from '@components/GithubLogo'
-
+import { Image }  from '@components/Image'
+import { GithubLoginAPI } from '@networking/api/GithubLoginAPI'
 import styles from './Login.styles'
 
 const Login = ({navigation}) => {
@@ -20,16 +20,27 @@ const Login = ({navigation}) => {
         headerTitle: 'Welcome Github Client',
         headerTitleAlign: 'center',
         headerStyle: {
-          backgroundColor: 'white',
+          backgroundColor: '#00A1F1',
+        },
+        headerTitleStyle: {
+            color: 'white'
         }
     })
+
+    const authenticateUser =  async (login, password) => {
+        const userData = `${login}:${password}`
+        let buff = new Buffer(userData);
+        let loginToken = buff.toString('base64');
+        var result = await GithubLoginAPI(loginToken)
+        console.log(result.status)
+    }
 
     return (
        <SafeAreaView style={styles.mainContainer}>
            <View style={styles.mainContainer}>
                <View style={styles.imageContainer}>
-                <GithubLogo
-                      source='https://github.blog/wp-content/uploads/2012/03/codercat.jpg?resize=896%2C896'
+                <Image
+                      source='https://pbs.twimg.com/media/De7LJDwX4AA54eD?format=png&name=small'
                       style={styles.image}
                   />
                </View>
@@ -44,11 +55,13 @@ const Login = ({navigation}) => {
                     <Input
                             label='Password'
                             value={password}
+                            secureTextEntry={true}
                             onChangeText={password => setPassword(password)}
                         />
                </View>
                <View style={styles.buttonContainer}>
-                    <Button text= "Log in"/>
+                    <Button onPress = {()=>authenticateUser(username,password)} text= "Log in"/>
+                    <Button onPress = {()=>authenticateUser(username,password)} text= "Forget Password?"/>
                </View>
            </View>
        </SafeAreaView> 
