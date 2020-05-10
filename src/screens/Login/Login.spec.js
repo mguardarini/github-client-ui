@@ -11,7 +11,6 @@ beforeEach(() => {
         Object.assign(navigation, obj)
       },
       navigate: jest.fn(),
-      goBack: jest.fn(),
     }
     component = render(<Login navigation={navigation} />)
 })

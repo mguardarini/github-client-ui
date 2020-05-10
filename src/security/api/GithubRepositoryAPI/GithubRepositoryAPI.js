@@ -3,10 +3,10 @@ import config from '../../enviroments/config.json';
 
 const githubUrl = config.githubUrl;
 
-const GithubLoginAPI = (token) =>
+const GithubRepositoryAPI = (token) =>
 {
     return( axios.get(
-      `${githubUrl}/user`,
+      `${githubUrl}/user/repos`,
       {
         headers: {
           Authorization: `Basic ${token}`,
@@ -16,4 +16,6 @@ const GithubLoginAPI = (token) =>
   )
 }
 
-export { GithubLoginAPI }
+export { 
+    GithubRepositoryAPI
+}

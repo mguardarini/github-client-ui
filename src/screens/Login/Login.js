@@ -3,6 +3,7 @@ import {
   SafeAreaView,
   View
 } from 'react-native';
+import { CommonActions } from '@react-navigation/native'
 import { Buffer } from 'buffer'
 import { Button } from '@components/Button'
 import { Input } from '@components/Input'
@@ -28,11 +29,19 @@ const Login = ({navigation}) => {
     })
 
     const authenticateUser =  async (login, password) => {
-        const userData = `${login}:${password}`
-        let buff = new Buffer(userData);
-        let loginToken = buff.toString('base64');
+
+        const basicOAuth = `${login}:${password}`
+        let loginToken = new Buffer(basicOAuth).toString('base64'); 
+        
         var result = await GithubLoginAPI(loginToken)
         console.log(result.status)
+        if(result.status == 200) {
+            navigation.dispatch(
+                CommonActions.navigate({
+                  name: 'Repository',
+                }),
+            )
+        }    
     }
 
     return (
