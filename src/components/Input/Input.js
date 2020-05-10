@@ -3,11 +3,10 @@ import React from 'react'
 import { TextInput } from 'react-native-paper'
 import {
   colorsStyle,
-  paddingHorizontal,
   backgroundColor
 } from './Input.styles'
 
-const Input = ({ label, value, onChangeText, secureTextEntry }) => {
+const Input = ({ label, value, onChangeText, secureTextEntry, testID }) => {
 
   return (
     <TextInput
@@ -17,6 +16,7 @@ const Input = ({ label, value, onChangeText, secureTextEntry }) => {
     style={{
       backgroundColor
     }}
+    testID={testID}
     onChangeText={onChangeText}
     theme = {{ colors: colorsStyle }}
 

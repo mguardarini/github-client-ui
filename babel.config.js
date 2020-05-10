@@ -8,8 +8,7 @@ module.exports = {
           '@': './src',
           '@components': './src/components',
           '@screens': './src/screens',
-          '@images': './src/images',
-          '@networking':'./src/networking'
+          '@images': './src/images'
         },
       },
     ],

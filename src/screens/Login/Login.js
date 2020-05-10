@@ -7,7 +7,7 @@ import { Buffer } from 'buffer'
 import { Button } from '@components/Button'
 import { Input } from '@components/Input'
 import { Image }  from '@components/Image'
-import { GithubLoginAPI } from '@networking/api/GithubLoginAPI'
+import { GithubLoginAPI } from '../../security/api/GithubLoginAPI'
 import styles from './Login.styles'
 
 const Login = ({navigation}) => {
@@ -23,7 +23,7 @@ const Login = ({navigation}) => {
           backgroundColor: '#00A1F1',
         },
         headerTitleStyle: {
-            color: 'white'
+            color: '#FFF'
         }
     })
 
@@ -61,7 +61,7 @@ const Login = ({navigation}) => {
                </View>
                <View style={styles.buttonContainer}>
                     <Button onPress = {()=>authenticateUser(username,password)} text= "Log in"/>
-                    <Button opacity onPress = {()=>authenticateUser(username,password)} text= "Forget Password?"/>
+                    <Button opacity onPress = {()=>authenticateUser(username,password)} text= "Forgot Password?"/>
                </View>
            </View>
        </SafeAreaView> 
