@@ -5,7 +5,7 @@ import Input from './Input'
 describe('Input - Render', () => {
   let inputComponent
   beforeEach(() => {
-    inputComponent = render(<Input label="teste" testID="input" />)
+    inputComponent = render(<Input label="Float Label"/>)
   })
   test('Should be render with float label.', () => {
     let boxInput = inputComponent.getAllByText('Float Label')
