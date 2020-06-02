@@ -5,8 +5,8 @@ import {Buffer} from 'buffer';
 import {Button} from '@components/Button';
 import {Input} from '@components/Input';
 import {Image} from '@components/Image';
-import {GithubLoginAPI} from '../../security/api/GithubLoginAPI';
-import styles from './Login.styles';
+import {GithubLoginAPI} from '@/infrastructure/api/GithubLoginAPI';
+import styles from './Login.styles.ts';
 
 const Login = ({navigation}) => {
   const [username, setUsername] = useState('');

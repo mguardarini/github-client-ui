@@ -1,2 +1,2 @@
-import  Repository  from './Repository'
-export { Repository }
+import Repository from './Repository';
+export {Repository};

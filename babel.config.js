@@ -7,9 +7,10 @@ module.exports = {
         alias: {
           '@': './src',
           '@components': './src/components',
-          '@screens': './src/screens',
+          '@features': './src/features',
           '@images': './src/images',
-          '@enviroments':'./src/security/enviroments'
+          '@enviroments':'./src/infrastructure/enviroments',
+          '@infrastructure':'./src/infrastructure'
         },
       },
     ],
